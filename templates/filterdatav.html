@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1" cellspacing="0" cellpadding="10" >
+    <thead style="color:red;background-color:pink;">
+
+        <th >FullName</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Mobile</th>
+
+
+
+    </thead>
+    <tbody>
+    {% if d1 %}
+    {% for i in d1 %}
+    <tr>
+        <td style="color:black;background-color:skyblue;">{{i.userFullName}}</td>
+        <td style="color:white;background-color:red;">{{i.userEmail}}</td>
+        <td style="color:blue;background-color:yellow;">{{i.userPassword}}</td>
+        <td style="color:lime;background-color:seagreen;">{{i.userMobile}}</td>
+
+
+    </tr>
+
+    </tbody>
+    {% endfor %}
+    {% endif %}
+
+</table>
+
+
+
+
+</body>
+</html>

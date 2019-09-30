@@ -1,0 +1,45 @@
+{% extends 'pagee.html' %}
+{% block content %}
+
+<head>
+    <style>
+        .t1
+        {
+        background-color:pink;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1" cellspacing="0" cellpadding="10" class="t1" >
+    <thead style="color:black;">
+        <th>FullName </th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Mobile</th>
+        <th>Action</th>
+        <th>ACTION</th>
+
+
+    </thead>
+    {% if d %}
+    {% for i in d %}
+    <tbody>
+    <tr>
+    <td style="color:blue;background-color:yellow;">{{i.userFullName}}</td>
+     <td style="color:black;background-color:lime;">{{i.userEmail}}</td>
+     <td style="color:white;background-color:red;">{{i.userPassword}}</td>
+        <td style="color:yellow;background-color:skyblue;">{{i.userMobile}}</td>
+
+        <td><a href="/user/delete/?id={{i.userEmail}}">DELETE</a></td>
+        <td><a href="/user/editvalue/?email={{i.userEmail}}">EDIT</a></td>
+
+    </tr>
+    </tbody>
+    {% endfor %}
+    {% endif %}
+
+</table><br>
+
+{% endblock %}

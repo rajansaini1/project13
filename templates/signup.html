@@ -1,0 +1,30 @@
+{% extends 'pagee.html'%}
+{% block content%}
+<form method="post" >
+    {% csrf_token%}
+    {% if success %}
+    <script type="text/javascript">
+        alert('successfully registered');
+    </script>
+
+
+    {% endif%}
+<label>FullName:</label>
+<input type="text" name="name" id="name"><br>
+
+<label>Email:</label>
+<input type="text" name="email" id="email"><br>
+
+<label>Password:</label>
+<input type="password" name="password" id="password"><br>
+
+
+<label>Mobile:</label>
+<input type="text" name="mobile" id="mobile"><br>
+
+
+<input type="submit" value="insert data">
+
+</form>
+
+{% endblock%}

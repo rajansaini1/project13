@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1" cellpadding="10" cellspacing="0">
+    <thead>
+    <tr>
+
+        <th>name</th>
+        <th>email</th>
+        <th>password</th>
+        <th>mobile</th>
+    </tr>
+    </thead>
+    {% if g %}
+    <tbody>
+
+    <td>{{ g.userFullName }}</td>
+    <td>{{ g.userEmail }}</td>
+    <td>{{ g.userPassword }}</td>
+    <td>{{ g.userMobile }}</td>
+    </tbody>
+    {% endif %}
+
+
+</table>
+
+</body>
+</html>

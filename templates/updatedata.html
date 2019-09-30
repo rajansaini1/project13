@@ -1,0 +1,34 @@
+{% extends 'pagee.html'%}
+{% block content%}
+<form method="post" >
+    {% csrf_token%}
+    {% if u %}
+    <script type="text/javascript">
+        alert('data updated successfully ');
+    </script>
+
+
+    {% endif%}
+<label>FullName:</label>
+<input type="text" name="name" id="name"><br>
+
+<label>Email:</label>
+<input type="text" name="email" id="email"><br>
+
+<label>Password:</label>
+<input type="password" name="password" id="password"><br>
+
+
+<label>Mobile:</label>
+<input type="text" name="mobile" id="mobile"><br>
+
+<input type="submit" value="update data">
+
+</form>
+
+{% endblock%}
+
+
+
+emailid = request.GET["email"]
+    data = UserPhoto.objects.get(userEmail=emailid)

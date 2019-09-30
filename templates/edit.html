@@ -1,0 +1,36 @@
+{% extends 'pagee.html' %}
+{% block content %}
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% if c %}
+    <script type="text/javascript">
+        alert("successfully edit");
+    </script>
+    {% endif %}
+
+    <label>FullName:</label>
+<input type="text" value="{{e.userFullName}}" name="name" id="name"><br>
+
+<label>Email:</label>
+<input type="text" value="{{e.userEmail}}" name="email" id="email" readonly ><br>
+
+<label>Password:</label>
+<input type="password" value="{{e.userPassword}}" name="password" id="password"><br>
+
+
+<label>Mobile:</label>
+<input type="text" value="{{e.userMobile}}" name="mobile" id="mobile"><br>
+
+    <input type="submit" value="EDIT">
+
+
+
+
+</form>
+
+
+{% endblock %}
+
+
+
+

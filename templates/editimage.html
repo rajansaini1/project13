@@ -1,0 +1,37 @@
+{% extends 'pagee.html' %}
+{% block content %}
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% if picedit %}
+    <script type="text/javascript">
+        alert("image edited successfully ");
+    </script>
+    {% endif %}
+
+    <label>FullName:</label>
+<input type="text" value="{{ep.userFullName}}" name="name" id="name"><br>
+
+<label>Email:</label>
+<input type="text" value="{{ep.userEmail}}" name="email" id="email" readonly ><br>
+
+<label>Password:</label>
+<input type="password" value="{{ep.userPassword}}" name="password" id="password"><br>
+
+
+<label>Mobile:</label>
+<input type="text" value="{{ep.userMobile}}" name="mobile" id="mobile"><br>
+<img src="/media/{{ep.photo}}" height="100px" width="100px">
+    <input type="file" name="newpic" ><br>
+    <input type="submit" value="EDIT IMAGE">
+
+
+
+
+</form>
+
+
+{% endblock %}
+
+
+
+
